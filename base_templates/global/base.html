@@ -23,13 +23,14 @@
         </ul>
       </nav>
       <div class="search">
-        <form action="#" method="GET">
+        <form action={% url "contact:search" %} method="GET">
           <input
             class="search-input"
             type="text"
-            name="search"
+            name="q"
             id="search"
             placeholder="Pesquisar"
+            value="{{ request.GET.q.strip }}"
           />
           
         </form>
