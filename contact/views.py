@@ -31,6 +31,8 @@ def contact(request, contact_id):
 
 
 def search(request):
+
+
     search_value = request.GET.get('q', '').strip()
 
     if search_value == '':
@@ -60,5 +62,9 @@ def search(request):
         'contact/index.html',
         context
     )
+
+
+def create(request):
+    return render(request, 'contact/create.html')
 
 
